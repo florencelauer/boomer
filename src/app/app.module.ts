@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppComponent } from './app.component';
@@ -27,8 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserAnimationsModule,
-    BrowserModule,
     BrowserAnimationsModule,
+    BrowserModule,
     HttpClientModule,
     MatButtonModule,
     MatCardModule,
@@ -38,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatPaginatorModule,
     MatSliderModule,
+    MatTableModule,
     MatToolbarModule
   ],
   providers: [],
