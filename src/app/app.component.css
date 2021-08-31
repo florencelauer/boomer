@@ -1,14 +1,45 @@
-h1 {
-    margin: 8px;
+.main-page {
+    width: 60%;
+    margin: auto;
+    overflow: auto;
+    padding-top: 100px;
 }
 
-.mat-card {
-    flex: 1 1 auto;
-    width: 50%;
+.right-cards {
+    width: 40%;
+    float: right;
+}
+
+.left-cards {
+    width: 40%;
+    float: left;
+}
+
+.text-card {
+    height: 3%;
+}
+
+.seed-card {
+    height: 3%;
+    margin-top: 200px;
+}
+
+.algorithms-card {
+    height: 3%;
 }
 
 .text-box {
     width: 100%;
     flex-direction: column;
     display: flex;
+}
+
+.mat-card {
+    margin: 20px;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,1),
+                0 1px 1px 0 rgba(0,0,0,1),
+                0 1px 3px 0 rgba(0,0,0,1);
 }

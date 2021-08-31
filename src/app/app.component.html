@@ -18,32 +18,48 @@
   </mat-menu>
 </mat-toolbar>
 
-<div style="display: flex">
-  <mat-card class="mat-card">
-    <mat-card-content>
-      <div class="text-box">
-        <mat-form-field >
-          <mat-label>Écrivez ici</mat-label>
-          <textarea matInput (change)="textInput = $event.target.value" [defaultValue]="textInput"></textarea>
-        </mat-form-field>
-      </div>
-      <div class="text-box">
-        <mat-form-field >
-          <mat-label>Boomer</mat-label>
-          <textarea matInput readonly [(value)]="textOutput"></textarea>
-        </mat-form-field>
-      </div>
-      <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
-    </mat-card-content>
-  </mat-card>
+<div class="main-page">
+  <div class="left-cards">
+    <mat-card class="text-card">
+      <mat-card-content>
+        <div class="text-box">
+            <mat-form-field >
+            <mat-label>Écrivez ici</mat-label>
+            <textarea matInput
+                rows="5"
+                (change)="textInput = $event.target.value"
+                [defaultValue]="textInput"></textarea>
+            </mat-form-field>
+        </div>
+        <div class="text-box">
+            <mat-form-field>
+            <mat-label>Boomer</mat-label>
+            <textarea matInput readonly
+                rows="5"
+                [(value)]="textOutput"></textarea>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="seed-card">
+        <mat-card-header>
+        <mat-card-title>Paramètres</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+        <div><app-seed></app-seed></div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
 
-  <mat-card class="mat-card">
-    <mat-card-header>
-      <mat-card-title>Paramètres</mat-card-title>
-    </mat-card-header>
-    <mat-card-actions>
-      <div><app-seed></app-seed></div>
-      <div><app-algorithms></app-algorithms></div>
-    </mat-card-actions>
-  </mat-card>
+  <div class="right-cards">
+    <mat-card class="algorithms-card">
+        <mat-card-header>
+        <mat-card-title>Algorithmes</mat-card-title>
+        </mat-card-header>
+        <mat-card-actions>
+        <div><app-algorithms></app-algorithms></div>
+        </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
