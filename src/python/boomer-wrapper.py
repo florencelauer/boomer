@@ -18,6 +18,6 @@ def __execute(input, js_algo_configs=None, seed=None):
 
     return boomer.boomer(input, algo_cfgs=algo_configs, seed=seed)
 
-browser.document.boomer = {}
 browser.document.boomer.algorithms = __list_algorithms
 browser.document.boomer.execute = __execute
+browser.document.boomer.load_resolve();

@@ -13,6 +13,8 @@ export class AppComponent {
   constructor(private boomerService: BoomerService) {}
 
   execute() {
-    this.textOutput = this.boomerService.transformText(this.textInput);
+    this.boomerService.transformText(this.textInput).then((output) => {
+      this.textOutput = output
+    });
   }
 }
