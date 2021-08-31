@@ -1,17 +1,17 @@
 .main-page {
-    width: 60%;
+    width: 80%;
     margin: auto;
     overflow: auto;
     padding-top: 100px;
 }
 
 .right-cards {
-    width: 40%;
+    width: 50%;
     float: right;
 }
 
 .left-cards {
-    width: 40%;
+    width: 50%;
     float: left;
 }
 
@@ -21,7 +21,7 @@
 
 .seed-card {
     height: 3%;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .algorithms-card {
