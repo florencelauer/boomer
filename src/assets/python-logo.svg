@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 40 40"
+   id="svg16"
+   sodipodi:docname="python-logo.svg"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="16"
+     inkscape:cx="20.21875"
+     inkscape:cy="19.6875"
+     inkscape:window-width="915"
+     inkscape:window-height="998"
+     inkscape:window-x="2895"
+     inkscape:window-y="52"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <path
+     id="rect2"
+     d="M 20 0 C 14.46 0 10 2.23 10 5 L 10 9 L 20 9 L 20 10 L 10 10 L 5 10 C 2.23 10 0 14.46 0 20 C 0 25.54 2.23 30 5 30 L 9 30 C 9.002116 27.504741 9.1576447 25.605656 9.5234375 24.136719 C 9.8917565 22.657636 10.491163 21.594801 11.373047 20.880859 C 13.136814 19.452981 15.750625 19.488281 19.501953 19.488281 C 23.751894 19.488281 26.410653 19.431863 27.888672 18.335938 C 28.627682 17.787975 29.143939 16.977563 29.492188 15.642578 C 29.840436 14.307593 29.998047 12.465505 29.998047 9.9863281 L 30 9.9863281 L 30 5 C 30 2.23 25.54 0 20 0 z M 30.998047 10 C 30.997458 12.51361 30.843807 14.419346 30.458984 15.894531 C 30.073422 17.372555 29.432113 18.435941 28.484375 19.138672 C 26.588899 20.544131 23.752004 20.488281 19.501953 20.488281 C 15.753289 20.488281 13.365239 20.556117 12.003906 21.658203 C 11.32324 22.209246 10.828985 23.034252 10.494141 24.378906 C 10.161642 25.714141 10.002217 27.547004 10 30 L 10 30.048828 L 10 35 C 10 37.77 14.46 40 20 40 C 25.54 40 30 37.77 30 35 L 30 31 L 20 31 L 20 30 L 30 30 L 35 30 C 37.77 30 40 25.54 40 20 C 40 14.46 37.77 10 35 10 L 30.998047 10 z " />
+  <circle
+     cx="14.5"
+     cy="5"
+     r="1.85"
+     fill="white"
+     id="circle6" />
+  <circle
+     cx="25.5"
+     cy="35"
+     r="1.85"
+     fill="white"
+     id="circle8" />
+  <g
+     id="line10">
+    <path
+       style="color:#000000;fill:#000000;-inkscape-stroke:none"
+       d="M 10,9.5 H 20"
+       id="path385" />
+  </g>
+  <g
+     id="line12">
+    <path
+       style="color:#000000;fill:#000000;-inkscape-stroke:none"
+       d="M 20,30.5 H 30"
+       id="path394" />
+  </g>
+</svg>

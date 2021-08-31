@@ -1,4 +1,23 @@
-<h1>Boomer</h1>
+<mat-toolbar color="primary">
+  <span>Boomer</span>
+
+  <span style="flex: 1 1 auto;"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon svgIcon="githubLogo" style="transform: scale(1.5);"></mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateToWebSource();">
+          <mat-icon svgIcon="angularLogo">web</mat-icon>
+          <span>florencelauer/boomer</span>
+      </button>
+      <button mat-menu-item (click)="navigateToPythonSource();">
+          <mat-icon svgIcon="pythonLogo">python</mat-icon>
+          <span>eepp/boomer</span>
+      </button>
+  </mat-menu>
+</mat-toolbar>
+
 <div style="display: flex">
   <mat-card class="mat-card">
     <mat-card-content>
@@ -28,4 +47,3 @@
     </mat-card-actions>
   </mat-card>
 </div>
-

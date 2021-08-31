@@ -13,9 +13,17 @@ export class AppComponent {
 
   constructor(private boomerService: BoomerService, private optionsService: OptionsService) {}
 
-  execute(): void {
+  navigateToWebSource(): void {
+    window.open('https://github.com/florencelauer/boomer');
+  }
+
+  navigateToPythonSource(): void {
+    window.open('https://github.com/eepp/boomer');
+  }
+
+  execute() {
     this.boomerService.transformText(this.textInput, this.optionsService.getAlgos(), this.optionsService.getSeed()).then((output) => {
-      this.textOutput = output;
+      this.textOutput = output
     });
   }
 }
