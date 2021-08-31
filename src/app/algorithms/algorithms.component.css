@@ -4,6 +4,10 @@
     flex-wrap: wrap;
 }
 
+.title {
+    width: 100%;
+}
+
 .choices {
     border-radius: 8px;
     margin: 8px;

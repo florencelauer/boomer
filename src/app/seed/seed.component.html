@@ -1,0 +1,18 @@
+<div>
+    <label>Graine</label>
+</div>
+<mat-checkbox
+    class="checkbox"
+    (change)="optionsService.setSeedChecked($event.checked)">
+    {{optionsService.seed}}
+</mat-checkbox>
+<mat-slider
+    class="slider"
+    max="400"
+    min="0"
+    step="1"
+    thumbLabel="true"
+    [value]="optionsService.seed"
+    (input)="optionsService.seed=$event.value">
+    [defaultValue]="optionsService.seed">
+</mat-slider>

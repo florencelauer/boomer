@@ -11,11 +11,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AppComponent } from './app.component';
 import { AlgorithmsComponent } from './algorithms/algorithms.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SeedComponent } from './seed/seed.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlgorithmsComponent
+    AlgorithmsComponent,
+    SeedComponent
   ],
   imports: [
     BrowserModule,

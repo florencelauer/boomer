@@ -1,10 +1,9 @@
 
 <div class="container">
+    <label class="title">Algorithmes</label>
     <div class="choices" *ngFor="let algorithm of this.algorithms">
         <mat-checkbox
             class="checkbox"
-            [checked]="false"
-            [color]="black"
             (change)="setAlgorithm(algorithm, $event.checked)">
             {{algorithm}}
         </mat-checkbox>
@@ -15,18 +14,18 @@
                 matInput 
                 type="number"
                 step='0.01'
-                [value]="values.get(algorithm)"
+                [value]="optionsService.values.get(algorithm)"
                 (input)="setValue(algorithm, $event.target.value)" 
-                [defaultValue]="values.get(algorithm)">
+                [defaultValue]="optionsService.values.get(algorithm)">
         </mat-form-field>
         <mat-slider
             class="slider"
             max="1"
             min="0"
             step="0.01"
-            [value]="values.get(algorithm)"
+            [value]="optionsService.values.get(algorithm)"
             (input)="setValue(algorithm, $event.value)">
-            [defaultValue]="values.get(algorithm)">
+            [defaultValue]="optionsService.values.get(algorithm)">
         </mat-slider>
     </div>
 </div>
