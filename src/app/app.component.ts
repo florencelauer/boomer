@@ -7,14 +7,14 @@ import { BoomerService } from './boomer.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  textInput: string = "Bonjour, je m'appel Gabriel.";
-  textOutput: string = "";
+  textInput = 'Bonjour, je m\'appelle Gabriel.';
+  textOutput = '';
 
   constructor(private boomerService: BoomerService) {}
 
-  execute() {
+  execute(): void {
     this.boomerService.transformText(this.textInput).then((output) => {
-      this.textOutput = output
+      this.textOutput = output;
     });
   }
 }

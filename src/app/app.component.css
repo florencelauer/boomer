@@ -1,0 +1,14 @@
+h1 {
+    margin: 8px;
+}
+
+.mat-card {
+    flex: 1 1 auto;
+    width: 50%;
+}
+
+.text-box {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+}

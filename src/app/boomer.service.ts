@@ -20,12 +20,12 @@ export class BoomerService {
     (document as any).boomer.load_reject  = this.scriptLoadedReject;
 
     /* load the python script asynchronously */
-    let script = document.createElement('script');
+    const script = document.createElement('script');
     script.src = 'python/boomer-wrapper.py';
     script.type = 'text/python';
     document.getElementsByTagName('head')[0].appendChild(script);
 
-    /* FIXME: ideally, this would be given by the Boomer python library. */ 
+    /* FIXME: ideally, this would be given by the Boomer python library. */
     this.descriptions['monique'] = 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.';
     this.descriptions['alain']   = 'Alain permute certains suffixes.';
     this.descriptions['nicole']  = 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.';
@@ -46,7 +46,7 @@ export class BoomerService {
     await this.scriptLoaded;
     return (document as any).boomer.algorithms();
   }
-  
+
   async transformText(text: string, algos?: Map<string, [number, number]>, seed?: number): Promise<string> {
     await this.scriptLoaded;
     if (algos === undefined) {
@@ -67,6 +67,6 @@ export class BoomerService {
       }
 
       reject();
-    })
+    });
   }
 }
