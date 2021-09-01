@@ -18,9 +18,26 @@ export class AlgorithmsComponent implements OnInit {
 
     this.boomerService.listAlgorithms().then((list) => {
       list.forEach((algorithm) => {
-        this.optionsService.setAlgoValue(algorithm, 0.5);
+        this.optionsService.setAlgoValue(algorithm, 1);
         this.optionsService.setAlgo(algorithm, true);
       });
     });
+  }
+
+  sliderInputValueChanged(algo: string, event: any): void {
+    /* make sure it is a string */
+    if (String(Number(event.target.value)) !== event.target.value) {
+      event.target.value = String(this.optionsService.getAlgoValue(algo));
+      return;
+    }
+
+    /* make sure it is bounded */
+    const nextNumber: number = Number(event.target.value);
+    if (nextNumber < 0 || 10 < nextNumber) {
+      event.target.value = String(this.optionsService.getAlgoValue(algo));
+      return;
+    }
+
+    this.optionsService.setAlgoValue(algo, nextNumber);
   }
 }

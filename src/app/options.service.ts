@@ -30,10 +30,16 @@ export class OptionsService {
     return false;
   }
 
-  setAlgoValue(name: string, value: number): void {
-    this.algoValues.set(name, value);
+  setAlgoValue(name: string, value: number|string): void {
+    if (typeof(value) === "string") {
+      if (String(Number(value)) !== value) {
+        return;
+      }
+    }
+
+    this.algoValues.set(name, value as number);
     if (this.algosInUse.has(name)) {
-      this.algosInUse.set(name, value);
+      this.algosInUse.set(name, value as number);
     }
   }
 
@@ -45,7 +51,7 @@ export class OptionsService {
     const algos: Map<string, [number, number]> = new Map();
     this.algosInUse.forEach((value: number, key: string) => {
       if (value >= 0) {
-        algos.set(key, [value * 10, 10]);
+        algos.set(key, [value, 10 - value]);
       } else {
         algos.set(key, [0, 10]);
       }
