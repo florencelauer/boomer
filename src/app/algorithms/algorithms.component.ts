@@ -18,24 +18,9 @@ export class AlgorithmsComponent implements OnInit {
 
     this.boomerService.listAlgorithms().then((list) => {
       list.forEach((algorithm) => {
-        this.optionsService.values.set(algorithm, 0.25);
+        this.optionsService.setAlgoValue(algorithm, 0.5);
+        this.optionsService.setAlgo(algorithm, true);
       });
     });
   }
-
-  setAlgorithm(algorithm: string, checked: boolean): void {
-    if (checked) {
-      this.optionsService.algosInUse.set(algorithm, this.optionsService.values.get(algorithm));
-    } else {
-      this.optionsService.algosInUse.delete(algorithm);
-    }
-  }
-
-  setValue(algorithm: string, value: number): void {
-    this.optionsService.values.set(algorithm, value as number);
-    if (this.optionsService.algosInUse.has(algorithm)) {
-      this.optionsService.algosInUse.set(algorithm, value);
-    }
-  }
-
 }
