@@ -3,6 +3,7 @@
     margin: auto;
     overflow: auto;
     padding-top: 100px;
+
 }
 
 .right-cards {
@@ -36,6 +37,7 @@
 
 .mat-card {
     margin: 20px;
+    opacity: 0.9;
 }
 
 .mat-card:not([class*=mat-elevation-z]) {
