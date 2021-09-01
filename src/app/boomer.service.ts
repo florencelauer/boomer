@@ -26,7 +26,7 @@ export class BoomerService {
     document.getElementsByTagName('head')[0].appendChild(script);
 
     /* FIXME: ideally, this would be given by the Boomer python library. */
-    this.descriptions['monique'] = 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.';
+    this.descriptions['monique'] = 'Monique s\'occupe de quelques remplacements populaires simples, dont plusieurs homophones.';
     this.descriptions['alain']   = 'Alain permute certains suffixes.';
     this.descriptions['nicole']  = 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.';
     this.descriptions['serge']   = 'Serge remplace des formes contractées par leur forme longue.';
