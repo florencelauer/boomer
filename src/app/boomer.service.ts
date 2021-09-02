@@ -26,20 +26,20 @@ export class BoomerService {
     document.getElementsByTagName('head')[0].appendChild(script);
 
     /* FIXME: ideally, this would be given by the Boomer python library. */
-    this.descriptions['monique'] = 'Monique s\'occupe de quelques remplacements populaires simples, dont plusieurs homophones.';
-    this.descriptions['alain']   = 'Alain permute certains suffixes.';
-    this.descriptions['nicole']  = 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.';
-    this.descriptions['serge']   = 'Serge remplace des formes contractées par leur forme longue.';
-    this.descriptions['andré']   = 'André fait commencer certains mots par une majuscule.';
-    this.descriptions['muriel']  = 'Muriel fait commencer certains mots par une minuscule.';
-    this.descriptions['denis']   = 'Denis allonge certaines ponctuations.';
-    this.descriptions['guy']     = 'Guy supprime des accents.';
-    this.descriptions['chantal'] = 'Chantal remplace les apostrophes et les traits d\'union par des espaces ou par rien.';
-    this.descriptions['marc']    = 'Marc supprime des petits mots.';
-    this.descriptions['manon']   = 'Manon permute deux lettres d\'un mot assez long.';
-    this.descriptions['sylvain'] = 'Sylvain multiplie les espaces.';
-    this.descriptions['josey']   = 'Josey ajoute des virgules ou des points.';
-    this.descriptions['yves']    = 'Yves remplace bêtement certaines chaines par d\'autres qui sont phonétiquement équivalentes.';
+    this.descriptions.set('monique', 'Monique s\'occupe de quelques remplacements populaires simples, dont plusieurs homophones.');
+    this.descriptions.set('alain', 'Alain permute certains suffixes.');
+    this.descriptions.set('nicole', 'Nicole gère tout ce qui concerne la conjugaison des verbes du premier groupe.');
+    this.descriptions.set('serge', 'Serge remplace des formes contractées par leur forme longue.');
+    this.descriptions.set('andré', 'André fait commencer certains mots par une majuscule.');
+    this.descriptions.set('muriel', 'Muriel fait commencer certains mots par une minuscule.');
+    this.descriptions.set('denis', 'Denis allonge certaines ponctuations.');
+    this.descriptions.set('guy', 'Guy supprime des accents.');
+    this.descriptions.set('chantal', 'Chantal remplace les apostrophes et les traits d\'union par des espaces ou par rien.');
+    this.descriptions.set('marc', 'Marc supprime des petits mots.');
+    this.descriptions.set('manon', 'Manon permute deux lettres d\'un mot assez long.');
+    this.descriptions.set('sylvain', 'Sylvain multiplie les espaces.');
+    this.descriptions.set('josey', 'Josey ajoute des virgules ou des points.');
+    this.descriptions.set('yves', 'Yves remplace bêtement certaines chaines par d\'autres qui sont phonétiquement équivalentes.');
   }
 
   async listAlgorithms(): Promise<string[]> {
@@ -63,7 +63,7 @@ export class BoomerService {
   async getDescription(name: string): Promise<string> {
     return new Promise((resolve, reject) => {
       if (this.descriptions.has(name)) {
-        return resolve(this.descriptions[name]);
+        return resolve(this.descriptions.get(name));
       }
 
       reject();
