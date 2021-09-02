@@ -28,7 +28,6 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserAnimationsModule,
-    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     MatButtonModule,

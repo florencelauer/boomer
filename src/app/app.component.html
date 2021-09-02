@@ -27,8 +27,8 @@
             <mat-label>Écrivez ici</mat-label>
             <textarea matInput
                 rows="5"
-                (change)="textInput = $event.target.value"
-                [defaultValue]="textInput"></textarea>
+                (input)="setTextInput($event.target.value)"
+                [defaultValue]="textInput.getValue()"></textarea>
             </mat-form-field>
         </div>
         <div class="text-box">
