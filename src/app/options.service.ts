@@ -7,7 +7,6 @@ export class OptionsService {
   algosInUse: Map<string, number> = new Map();
   algoValues: Map<string, number> = new Map();
 
-  public values: Map<string, number> = new Map();
   public seed = 100;
   private seedChecked = false;
 
@@ -31,7 +30,7 @@ export class OptionsService {
   }
 
   setAlgoValue(name: string, value: number|string): void {
-    if (typeof(value) === "string") {
+    if (typeof(value) === 'string') {
       if (String(Number(value)) !== value) {
         return;
       }
@@ -64,7 +63,7 @@ export class OptionsService {
   }
 
   public getSeed(): number {
-    if (this.seedChecked) {return this.seed;}
+    if (this.seedChecked) { return this.seed; }
     return;
   }
 }
