@@ -21,6 +21,16 @@ export class OptionsService {
     }
   }
 
+  selectAll(enable: boolean): void {
+    this.algosInUse.forEach((value: number, key: string) => {
+      if(enable) {
+        this.algosInUse.set(key, this.algoValues.get(key));
+      } else {
+        this.algosInUse.set(key, -1);
+      }
+    });
+  }
+
   isAlgoEnabled(name: string): boolean {
     if (this.algosInUse.has(name)) {
       return (this.algosInUse.get(name) >= 0);

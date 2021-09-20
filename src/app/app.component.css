@@ -20,9 +20,9 @@
     height: 3%;
 }
 
-.seed-card {
-    height: 3%;
-    margin-top: 150px;
+.actions {
+    display: flex;
+    justify-content: space-between;
 }
 
 .seed-app {

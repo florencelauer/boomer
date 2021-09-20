@@ -39,16 +39,11 @@
                 [(value)]="textOutput"></textarea>
             </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
+        <div class="actions">
+            <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
+            <span class="seed-app"><app-seed></app-seed></span>
+        </div>
         </mat-card-content>
-      </mat-card>
-      <mat-card class="seed-card">
-        <mat-card-header>
-        <mat-card-title>Paramètres</mat-card-title>
-        </mat-card-header>
-        <mat-card-actions>
-        <div class="seed-app"><app-seed></app-seed></div>
-        </mat-card-actions>
       </mat-card>
     </div>
 
