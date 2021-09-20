@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 body {
-    background-image: url("http://www.milwaukeeindependent.com/wp-content/uploads/2018/12/BlameBoomersRuinFuturePhoto_02.jpg");
+    background-image: url("assets/50.png");
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
