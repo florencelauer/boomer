@@ -1,60 +1,64 @@
 <mat-toolbar color="primary">
-  <span>Boomer</span>
-
-  <span style="flex: 1 1 auto;"></span>
-
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-      <mat-icon svgIcon="githubLogo" style="transform: scale(1.5);"></mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="navigateToWebSource();">
+  <div class="container">
+    <div class="navbar">
+      <span>Boomer</span>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon svgIcon="githubLogo" style="transform: scale(1.5);"></mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="navigateToWebSource();">
           <mat-icon svgIcon="angularLogo">web</mat-icon>
           <span>florencelauer/boomer</span>
-      </button>
-      <button mat-menu-item (click)="navigateToPythonSource();">
+        </button>
+        <button mat-menu-item (click)="navigateToPythonSource();">
           <mat-icon svgIcon="pythonLogo">python</mat-icon>
           <span>eepp/boomer</span>
-      </button>
-  </mat-menu>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
 </mat-toolbar>
+  
+<main>
 
-<div class="main-page">
-  <div class="left-cards">
-    <mat-card class="text-card">
-      <mat-card-content>
-        <div class="text-box">
-            <mat-form-field >
-            <mat-label>Écrivez ici</mat-label>
-            <textarea matInput
-                rows="5"
-                (input)="setTextInput($event.target.value)"
-                [defaultValue]="textInput.getValue()"></textarea>
-            </mat-form-field>
-        </div>
-        <div class="text-box">
-            <mat-form-field>
-            <mat-label>Boomer</mat-label>
-            <textarea matInput readonly
-                rows="5"
-                [(value)]="textOutput"></textarea>
-            </mat-form-field>
-        </div>
-        <div class="actions">
-            <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
-            <span class="seed-app"><app-seed></app-seed></span>
-        </div>
-        </mat-card-content>
-      </mat-card>
+  <div class="container main-container">
+    <div class="main-page">
+      <div class="left-cards">
+        <mat-card class="text-card">
+          <mat-card-content>
+            <div class="text-box">
+              <mat-form-field>
+                <mat-label>Écrivez ici</mat-label>
+                <textarea matInput rows="5" (input)="setTextInput($event.target.value)"
+                  [defaultValue]="textInput.getValue()"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="text-box">
+              <mat-form-field>
+                <mat-label>Boomer</mat-label>
+                <textarea matInput readonly rows="5" [(value)]="textOutput"></textarea>
+              </mat-form-field>
+            </div>
+            <div class="actions">
+              <button mat-raised-button color="primary" (click)="execute()">Exécuter</button>
+              <span class="seed-app">
+                <app-seed></app-seed>
+              </span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="right-cards">
+        <mat-card>
+          <mat-card-title>Algorithmes</mat-card-title>
+          <mat-divider></mat-divider>
+          <mat-card-content>
+            <app-algorithms></app-algorithms>
+          </mat-card-content>
+        </mat-card>
+      </div>
     </div>
 
-  <div class="right-cards">
-    <mat-card class="algorithms-card">
-        <mat-card-header>
-        <mat-card-title>Algorithmes</mat-card-title>
-        </mat-card-header>
-        <mat-card-actions>
-        <div><app-algorithms></app-algorithms></div>
-        </mat-card-actions>
-    </mat-card>
   </div>
-</div>
+</main>

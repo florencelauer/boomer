@@ -1,45 +1,108 @@
-.main-page {
-    width: 80%;
-    margin: auto;
+main {
     overflow: auto;
-    padding-top: 100px;
-
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
-.right-cards {
-    width: 50%;
-    float: right;
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* mat-toolbar {
+  width: 100%;
+}
+
+mat-toolbar .container {
+  width: 100%;
+} */
+
+.main-page {
+  display: flex;
+  flex-direction: row;
+  margin: 0 -1em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-page {
+    flex-direction: column;
+  }
+}
+
+.main-container {
+    /* margin: 0 -em; */
 }
 
 .left-cards {
-    width: 50%;
-    float: left;
+  flex-basis: 50%;
+  margin: 1em;
+}
+
+.right-cards {
+  flex-basis: 50%;
+  margin: 1em;
 }
 
 .text-card {
-    height: 3%;
+  /* height: 3%; */
 }
 
 .actions {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .seed-app {
-    margin-left: 24px;
+  margin-left: 24px;
 }
 
 .algorithms-card {
-    height: 3%;
+  height: 3%;
 }
 
 .text-box {
-    width: 100%;
-    flex-direction: column;
-    display: flex;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
 }
 
-.mat-card {
-    margin: 20px;
-    opacity: 0.9;
+
+
+mat-card {
+  /* margin: 20px; */
+  opacity: 0.9;
+  
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }

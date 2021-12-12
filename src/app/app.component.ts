@@ -4,13 +4,15 @@ import { OptionsService } from './options.service';
 import { debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
+const INFO = "Écrivez votre texte ici, celui-ci ressortira écrit à la boomer! Vous pouvez choisir l'algorithme à utiliser."
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  textInput: BehaviorSubject<string> = new BehaviorSubject<string>('Bonjour je m\'appelle Florence');
+  textInput: BehaviorSubject<string> = new BehaviorSubject<string>(INFO);
   textOutput = '';
   textOutputObservable: Observable<string>;
 
