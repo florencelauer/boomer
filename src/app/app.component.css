@@ -17,13 +17,15 @@ main {
   width: 100%;
 }
 
-/* mat-toolbar {
-  width: 100%;
+.title {
+  margin-right: 20%;
+  text-align: left;
 }
 
-mat-toolbar .container {
-  width: 100%;
-} */
+.menu {
+  margin-left: 40%;
+  text-align: right;
+}
 
 .main-page {
   display: flex;
@@ -37,10 +39,6 @@ mat-toolbar .container {
   }
 }
 
-.main-container {
-    /* margin: 0 -em; */
-}
-
 .left-cards {
   flex-basis: 50%;
   margin: 1em;
@@ -49,10 +47,6 @@ mat-toolbar .container {
 .right-cards {
   flex-basis: 50%;
   margin: 1em;
-}
-
-.text-card {
-  /* height: 3%; */
 }
 
 .actions {
@@ -74,10 +68,7 @@ mat-toolbar .container {
   display: flex;
 }
 
-
-
 mat-card {
-  /* margin: 20px; */
   opacity: 0.9;
   
 }
